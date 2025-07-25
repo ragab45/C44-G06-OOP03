@@ -2,9 +2,21 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        
+            #region Q-1
+            private char gender;
+        public char Gender
         {
-            Console.WriteLine("Hello, World!");
+            get => gender;
+            set
+            {
+                if (value == 'M' || value == 'F')
+                    gender = value;
+                else
+                    gender = 'M'; // default
+            }
         }
+        #endregion
     }
-}
+    }
+
