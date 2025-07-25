@@ -39,29 +39,48 @@ namespace Demo
         //}
         #endregion
         #region V-2
-        public int Speed { get; set; }
+        //    public int Speed { get; set; }
 
-        public Car(int id, string model, int speed)
+        //    public Car(int id, string model, int speed)
+        //    {
+        //        Id = id;
+        //        Model = model;
+        //        Speed = speed;
+        //    }
+
+        //    public Car(int id, string model)
+        //    {
+        //        Id = id;
+        //        Model = model;
+        //    }
+
+        //    public Car(int id)
+        //    {
+        //        Id = id;
+        //    }
+
+        //}
+
+        #endregion
+
+        #region V-3
+        internal class Engine
         {
-            Id = id;
-            Model = model;
-            Speed = speed;
+            public void start()
+            {
+                Console.WriteLine();
+            }
         }
 
-        public Car(int id, string model)
+        public class Car
         {
-            Id = id;
-            Model = model;
+            private Engine engine = new Engine();
+            public Car()
+            {
+                engine.start();
+            }
         }
-
-        public Car(int id)
-        {
-            Id = id;
-        }
-    
+        #endregion
     }
-    
-    #endregion
-}
     
 }
